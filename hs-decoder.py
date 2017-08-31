@@ -28,9 +28,9 @@ def get_card(dbf_id):
 def format_card(card):
     return "(%d) %s" % (card["cost"], card["name"])
 deck = Deck.from_deckstring(deckstring)
-print get_card(deck.heroes[0])["cardClass"]
-print deck.format, "\n", lb
+print (get_card(deck.heroes[0])["cardClass"])
+print ("%s \n%s" % (deck.format, lb))
 for s in deck.cards:
-    print s[1],"x",format_card(get_card(s[0]))
-print lb, "\nDeckstring:", deckstring
+    print ("%dx %s" % (s[1], format_card(get_card(s[0]))))
+print ("%s \nDeckstring: %s:" % (lb, deckstring))
 

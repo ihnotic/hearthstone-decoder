@@ -2,7 +2,9 @@
 Python command line script to print out decklist based from deckid string input
 ## Requirements
 
+* Python 2.7 or greater
 * hearthstone python library (https://github.com/HearthSim/python-hearthstone)
+`pip install hearthstone`
 
 ## Usage
 
@@ -15,24 +17,24 @@ $ ./hs-decoder.py AAECAa0GBgm0A6irAoW4Are7ApDTAgwelwKhBMkG0wrXCrW7Auq/AtHBAuXMAr
 PRIEST
 FormatType.FT_STANDARD
 ===========================
-1 x (7) Prophet Velen
-1 x (9) Malygos
-1 x (10) Y'Shaarj, Rage Unbound
-1 x (4) Barnes
-1 x (4) Greater Healing Potion
-1 x (8) Shadowreaper Anduin
-2 x (3) Thoughtsteal
-2 x (1) Holy Smite
-2 x (2) Mind Blast
-2 x (5) Holy Nova
-2 x (3) Shadow Word: Death
-2 x (2) Shadow Word: Pain
-2 x (1) Potion of Madness
-2 x (6) Dragonfire Potion
-2 x (2) Shadow Visions
-2 x (4) Eternal Servitude
-2 x (6) Shadow Essence
-2 x (2) Spirit Lash
+1x (7) Prophet Velen
+1x (9) Malygos
+1x (10) Y'Shaarj, Rage Unbound
+1x (4) Barnes
+1x (4) Greater Healing Potion
+1x (8) Shadowreaper Anduin
+2x (3) Thoughtsteal
+2x (1) Holy Smite
+2x (2) Mind Blast
+2x (5) Holy Nova
+2x (3) Shadow Word: Death
+2x (2) Shadow Word: Pain
+2x (1) Potion of Madness
+2x (6) Dragonfire Potion
+2x (2) Shadow Visions
+2x (4) Eternal Servitude
+2x (6) Shadow Essence
+2x (2) Spirit Lash
 ============================
 Deckstring: AAECAa0GBgm0A6irAoW4Are7ApDTAgwelwKhBMkG0wrXCrW7Auq/AtHBAuXMArTOAvDPAgA=
 ```
