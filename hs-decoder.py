@@ -9,7 +9,7 @@ from hearthstone.deckstrings import Deck
 deckstring = sys.argv[1]
 db_url = "https://api.hearthstonejson.com/v1/20457/enUS/cards.collectible.json"
 db_path = "./db.json"
-
+lb = "="*30
 if os.path.exists(db_path):
     with open(db_path, "r") as f:
         db = json.loads(f.read())
@@ -27,15 +27,10 @@ def get_card(dbf_id):
     return next(card for card in db if card["dbfId"] == dbf_id)
 def format_card(card):
     return "(%d) %s" % (card["cost"], card["name"])
-#================================================================
-# Parse and print deck
-#================================================================
 deck = Deck.from_deckstring(deckstring)
-print((get_card(deck.heroes[0]))["cardClass"])
-print(deck.format)
-print "==========================="
+print get_card(deck.heroes[0])["cardClass"]
+print deck.format, "\n", lb
 for s in deck.cards:
     print s[1],"x",format_card(get_card(s[0]))
-print "============================"
-print "Deckstring:", deckstring
+print lb, "\nDeckstring:", deckstring
 
