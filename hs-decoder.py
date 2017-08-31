@@ -22,6 +22,9 @@ else:
     else:
         raise RuntimeError("Couldn't download cards database: %s"
                            % response.text)
+def get_format():
+    if int(deck.format) == 2:return "STANDARD"
+    else:return "WILD"
 def get_card(dbf_id):
     return next((card for card in db if card["dbfId"] == dbf_id), None)
 def sort_cards():
@@ -30,11 +33,11 @@ def sort_cards():
         card = get_card(s[0])
         card["ammount"] = int(s[1])
         cards.append(card)
-    cards = sorted(cards, key=lambda card:(card["cost"], card["name"]))
-    return cards
-
+    return sorted(cards, key=lambda card:(card["cost"], card["cardClass"], card["name"]))
 print (get_card(deck.heroes[0])["cardClass"])
-print ("%s \n%s" % (deck.format, lb))
+print (get_format())
+print (lb)
 for i in sort_cards():
-    print ("%dx (%s) %s" % (i['ammount'], i['cost'], i['name']))
-print ("%s\nDeckstring: %s" % (lb, deckstring))
+    print ("%dx (%s) %s" % (i["ammount"], i["cost"], i["name"]))
+print (lb)
+print ("Deckstring: %s" % (deckstring))
