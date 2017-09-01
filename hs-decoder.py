@@ -1,9 +1,14 @@
 #!/usr/bin/env python
 import os
+import sys
 import json
 import requests
-import sys
+import argparse
 from hearthstone.deckstrings import Deck
+
+parser = argparse.ArgumentParser(description="Print hearthstone decklist to terminal from deckid")
+parser.add_argument('<deckid>', type=str, help='Hearthstone deckID to be converted')
+args = parser.parse_args()
 
 db_url = "https://api.hearthstonejson.com/v1/20457/enUS/cards.collectible.json"
 db_path = "./db.json"
