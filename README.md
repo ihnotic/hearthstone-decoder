@@ -5,6 +5,7 @@ Python command line script to print out decklist based from deckid string input
 * Python 2.7 or Python 3.4
 * hearthstone python library (https://github.com/HearthSim/python-hearthstone)
 * `pip install hearthstone`
+* Other pip packages: enum34, requests
 
 ## Usage
 
