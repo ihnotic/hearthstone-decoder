@@ -28,7 +28,7 @@ parser = argparse.ArgumentParser(description="Print hearthstone decklist to term
 parser.add_argument('<deckid>', type=str, help='Hearthstone deckID to be converted')
 args = parser.parse_args()
 
-db_url = "https://api.hearthstonejson.com/v1/24769/enUS/cards.collectible.json"
+db_url = "https://api.hearthstonejson.com/v1/latest/enUS/cards.collectible.json"
 db_path = "./db.json"
 deckstring = decode_base64(sys.argv[1])
 deck = Deck.from_deckstring(deckstring)
